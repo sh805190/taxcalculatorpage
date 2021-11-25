@@ -4,7 +4,7 @@ The service is tested on Windows 10 docker desktop. To start and build the docke
 
 ### `docker-compose up`
 
-Wait till all containers are built.
+Wait till all containers are built (you may wait 2-5min).
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
