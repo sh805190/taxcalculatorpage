@@ -1,0 +1,27 @@
+version: '2'
+services:
+  backend:
+    build: taxcalbackend/.
+
+    depends_on:
+      - db
+    command: sh -c './wait-for db:5432 -- npm start'
+
+    ports:
+     - "4000:4000"
+  frontend:
+    build: .
+
+    depends_on:
+      - db
+      - backend
+    command: sh -c './wait-for backend:4000 -- npm start'
+
+    ports:
+     - "3000:3000"
+     
+     
+  db:
+    image: "sh805190/p_test:first"
+    ports:
+      - 5432:5432

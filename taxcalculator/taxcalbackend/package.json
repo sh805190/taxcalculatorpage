@@ -1,0 +1,17 @@
+{
+
+  "name": "docker_calculate_tax_backend",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "Shuawn",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "express": "^4.17.1",
+    "pg": "^8.7.1",
+    "qs": "^6.7.0"
+  }
+}

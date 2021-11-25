@@ -1,0 +1,117 @@
+$primary: #0077FF;
+
+
+#item {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  position: relative;
+  left:20%;
+}
+
+#item td, #item th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 100px;
+  height: 70px;
+}
+
+
+#item th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+.inp{
+  position: relative;
+  margin: auto;
+  width: 10px;
+  max-width: 280px;
+  border-radius: 3px;
+  overflow: hidden;
+  left:20%;
+  bottom: 50%;
+
+
+.label{
+      position: absolute;
+
+    top: -10px;
+    left: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    transform-origin: 0 0;
+    transform: translate3d(0,0,0);
+    transition: all .2s ease;
+    pointer-events: none;
+      
+}
+
+.focus-bg{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(black,.05);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+input{
+    -webkit-appearance: none;
+    appearance: none;
+    margin-bottom: 10px;
+    width: 100px;
+    border: 0;
+    font-family: inherit;
+    padding: 16px 12px 0 12px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    background: rgba(black,.02);
+    box-shadow: inset 0 -1px 0 rgba(black,.3);
+    color: black;
+      transition: all .15s ease;
+  
+  &:hover{
+      background: rgba(white,.04);
+      box-shadow: inset 0 -1px 0 rgba(white,.5);
+  }
+        &:not(:placeholder-shown){
+          + .label{
+        color: rgba(white,.5);
+        transform: translate3d(0,-12px,0) scale(.75);}
+    }
+        &:focus{
+      background: rgba(white,.05);
+      outline: none;
+      box-shadow: inset 0 -2px 0 $primary;
+          + .label{
+        color: $primary;
+            transform: translate3d(0,-12px,0) scale(.75);
+          }
+          + .focus-bg{
+          transform: scaleX(1);
+            transition: all .1s ease;}}
+}}
+
+
+button {
+  outline: none;
+  border: none;
+  background:purple;
+  color: #ffffff;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  position: relative;
+  left:21%;
+  bottom:10px;
+
+}
